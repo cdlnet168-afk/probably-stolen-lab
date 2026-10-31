@@ -1,0 +1,2 @@
+# Build only. No third-party runtime dependencies.
+pyinstaller==6.22.3

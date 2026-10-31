@@ -1,0 +1,15 @@
+# Private runtime data: NEVER publish
+/data/
+*.sqlite3
+*.sqlite3-*
+preview.jpg
+__pycache__/
+*.py[cod]
+.tools/
+build/
+dist/
+release/
+*.spec
+.env
+.env.*
+*.log
