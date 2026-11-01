@@ -110,6 +110,8 @@ class LocalServer(ThreadingHTTPServer):
 
 def main():
     global DATA,DB,PORT
+    for stream in (sys.stdout,sys.stderr):
+        if hasattr(stream,'reconfigure'):stream.reconfigure(encoding='utf-8',errors='replace')
     parser=argparse.ArgumentParser(description='Probably Stolen local chemistry workbench')
     parser.add_argument('--version',action='version',version=VERSION)
     parser.add_argument('--no-browser',action='store_true')
