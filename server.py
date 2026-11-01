@@ -106,7 +106,7 @@ class Handler(SimpleHTTPRequestHandler):
         except Exception:self.sendj({'error':'操作失败，请检查输入或数据目录权限'},500)
 
 class LocalServer(ThreadingHTTPServer):
-    allow_reuse_address=False
+    allow_reuse_address=(sys.platform != 'win32')
 
 def main():
     global DATA,DB,PORT
